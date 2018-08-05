@@ -1,0 +1,10 @@
+@import './../../styles/_variables.scss';
+
+.quiz {
+    padding: 10px !important;
+    border-left: 3px solid $base-color-two-rgb-op5;
+
+    .title {
+        margin: 10px 0;
+    }
+}

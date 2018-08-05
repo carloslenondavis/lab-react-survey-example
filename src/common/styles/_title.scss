@@ -1,0 +1,11 @@
+@import './_variables.scss';
+
+.title {
+    margin: 0;
+
+    &.md-title {
+        color: $base-font-color;
+        font-size: $md-font-size;
+        font-weight: $title-font-weigth;
+    }
+}

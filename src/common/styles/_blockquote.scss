@@ -1,0 +1,9 @@
+@import './_variables.scss';
+
+.blockquote {
+    margin: 0;
+    padding: 0 5px;
+    color: $base-font-color-three;
+    border-left: 3px solid $base-color-three-rgb-op3;
+    font-size: $sm-font-size;
+}

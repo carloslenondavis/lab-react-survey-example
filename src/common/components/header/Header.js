@@ -14,7 +14,10 @@ import { AppBar, Toolbar, Typography, withStyles, Avatar } from '@material-ui/co
 const styles = {	
 	flex: {
 		flex: 1
-	}	
+	},
+	appBar: {
+		background: '#272644'
+	}
 };
 
 class Header extends Component {
@@ -30,7 +33,7 @@ class Header extends Component {
 		const { classes, appName } = this.props;
 		return (
 			<div>
-				<AppBar position="static">
+				<AppBar position="static" className={classes.appBar}>
 					<Toolbar>						
 						<Typography variant="title" color="inherit" className={classes.flex}>
 							{appName}

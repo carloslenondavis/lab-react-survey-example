@@ -1,0 +1,24 @@
+@import './common/styles/_variables.scss';
+
+body {
+  background: $base-color-1;
+  font-family: $base-font;  
+  margin: 0;
+  padding: 0;
+  color: $base-font-color;
+}
+
+.txt-cntr {
+  text-align: center;
+}
+
+.align-vrt-midl {
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.x-xl-size {
+  font-size: $x-xl-font-size;
+}
