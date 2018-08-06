@@ -43,10 +43,10 @@ class Wizard extends Component {
                         <p>Question description</p>
                     </blockquote>
                     <div>                        
-                        <input type="text" placeholder="insert the answer" value="testing" />                        
+                        <input type="text" placeholder="insert the answer" />                        
                     </div>
                     <div>
-                        <select>
+                        <select className="select">
                             <option selected></option>
                             <option value="grapefruit">Grapefruit</option>
                             <option value="lime">Lime</option>

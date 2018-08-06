@@ -36,13 +36,13 @@ class Wizard extends Component {
             <Grid container justify="center" spacing={0} className={classes.grid}>
                 <Grid item xs={10} sm={8} md={6} lg={6}>
                     <Grid container justify="center" spacing={0}>
-                        <Grid item xs={12} sm={3} md={2} lg={2} className="align-vrt-midl">
+                        <Grid item xs={12} sm={2} md={2} lg={2} className="align-vrt-midl">
                             <Counter />
                         </Grid>
-                        <Grid item xs={12} sm={9} md={10} lg={10}>
+                        <Grid item xs={12} sm={10} md={10} lg={10}>
                             <Quiz />
                         </Grid>
-                    </Grid>                
+                    </Grid>
                 </Grid>
             </Grid>			
 		);

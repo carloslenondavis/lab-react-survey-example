@@ -1,4 +1,6 @@
 @import './common/styles/_variables.scss';
+@import './common/styles/_mixins.scss';
+@import './common/styles/_select.scss';
 
 body {
   background: $base-color-1;

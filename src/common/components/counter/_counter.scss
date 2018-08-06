@@ -1,7 +1,10 @@
 @import './../../styles/_variables.scss';
+@import './../../styles/_mixins.scss';
 
-.counter {
+.counter {    
     margin: 0;
     font-weight: 300;
     color: $base-font-color-rgb-op3;
+    
+    @extend %default-transition;
 }

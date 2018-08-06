@@ -1,0 +1,18 @@
+@import './_variables.scss';
+@import './_mixins.scss';
+
+input[type='text'] {    
+    border: none;
+    border-bottom: 1px solid $base-color-two-rgb-op5;
+    color: $base-font-color;
+    width: 100%;
+
+    @extend %default-transition;
+}
+
+input {
+    &:focus {
+        outline-offset: 0 !important;
+        outline: none !important;        
+    }
+}
