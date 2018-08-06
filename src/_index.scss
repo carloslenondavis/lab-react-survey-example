@@ -1,6 +1,9 @@
 @import './common/styles/_variables.scss';
 @import './common/styles/_mixins.scss';
 @import './common/styles/_select.scss';
+@import './common/styles/_input.scss';
+@import './common/styles/_blockquote.scss';
+@import './common/styles/_title.scss';
 
 body {
   background: $base-color-1;
@@ -19,6 +22,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.def-cntrl-margin {
+  margin: 10px 0;
 }
 
 .x-xl-size {

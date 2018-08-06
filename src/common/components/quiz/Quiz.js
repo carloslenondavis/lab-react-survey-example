@@ -42,10 +42,10 @@ class Wizard extends Component {
                     <blockquote className="blockquote">
                         <p>Question description</p>
                     </blockquote>
-                    <div>                        
+                    <div className="def-cntrl-margin">                        
                         <input type="text" placeholder="insert the answer" />                        
                     </div>
-                    <div>
+                    <div className="def-cntrl-margin">
                         <select className="select">
                             <option selected></option>
                             <option value="grapefruit">Grapefruit</option>
@@ -54,23 +54,26 @@ class Wizard extends Component {
                             <option value="mango">Mango</option>
                         </select>                        
                     </div>
-                    <div>
+                    <div className="def-cntrl-margin">
                         <div>
-                            <label>
-                                <input name="opt" type="radio" value="option1" checked />
+                            <label className="input-container">                                
                                 Option 1
+                                <input name="opt" type="radio" value="option1" checked />
+                                <span class="checkmark"></span>
                             </label>
                         </div>
                         <div>
-                            <label>
-                                <input name="opt" type="radio" value="option2" checked />
+                            <label className="input-container">                                
                                 Option 2
+                                <input name="opt" type="radio" value="option2" checked />
+                                <span class="checkmark"></span>
                             </label>
                         </div>
                         <div>
-                            <label>
+                            <label className="input-container">                                
+                                Option 3
                                 <input name="opt" type="radio" value="option3" checked />
-                                Option 3                                
+                                <span class="checkmark"></span>         
                             </label>
                         </div>
                     </div>

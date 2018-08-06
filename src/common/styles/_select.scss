@@ -4,4 +4,15 @@ select {
     border-bottom: 1px solid $base-color-two-rgb-op5;
     color: $base-font-color;
     width: 100%;
+
+    @extend %default-transition;
+
+    &:focus {
+        outline-offset: 0 !important;
+        outline: none !important;        
+    }
+
+    option {
+        cursor: pointer !important;
+    }    
 }
