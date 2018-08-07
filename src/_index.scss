@@ -17,6 +17,10 @@ body {
   text-align: center;
 }
 
+.txt-right {
+  text-align: right;
+}
+
 .align-vrt-midl {
   vertical-align: middle;
   display: flex;
@@ -28,6 +32,14 @@ body {
   margin: 10px 0;
 }
 
+.m-t-10 {
+  margin-top: 10px !important;
+}
+
 .x-xl-size {
   font-size: $x-xl-font-size;
+}
+
+.default-transition {
+  @extend %default-transition;
 }

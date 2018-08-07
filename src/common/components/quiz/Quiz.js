@@ -9,83 +9,107 @@
 //core dependencies
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Grid, Paper, withStyles } from '@material-ui/core';
+import { Paper, withStyles, List, ListItem, ListItemText, Avatar } from '@material-ui/core';
 import './_quiz.scss';
 
 const styles = theme => ({
-    grid: {
-        padding: 10,
-        width: 'auto',
-        margin: 0
-    },
     paper: {           
         flexWrap: 'wrap',
         padding: theme.spacing.unit / 2,
     },
 });
 
-class Wizard extends Component {
+class Quiz extends Component {
 
 	constructor(props){
         super(props);
         	    
-		this.state = {};
-	}
+        this.state = {};
+    }
+
+    getType = (_type, data, handleChange, answer) => {        
+        switch (_type) {
+            case 'Question':
+                return <div className="def-cntrl-margin">                        
+                        <input 
+                            type="text" 
+                            placeholder="insert the answer" 
+                            value={answer} 
+                            onChange={handleChange} />                        
+                </div>;
+            case 'Selection':
+                return <div className="def-cntrl-margin">
+                    <select 
+                        className="select" 
+                        value={answer}
+                        onChange={handleChange}>
+                        <option defaultValue=""></option>
+                        {
+                            data.options.map((opt) => <option key={opt} value={opt}>{opt}</option> )
+                        }
+                    </select>                        
+                </div>
+            case 'One Selection':
+                return  <div className="def-cntrl-margin">
+                    {
+                        data.options.map((opt) => 
+                            <div key={opt}>
+                                <label className="input-container">                                
+                                    {opt}
+                                    <input 
+                                        name="opt" 
+                                        type="radio" 
+                                        value={opt} 
+                                        checked={answer === opt ? true : false}
+                                        onChange={handleChange} />
+                                    <span className="checkmark"></span>
+                                </label>
+                            </div>
+                        )
+                    }
+                </div>
+            case 'Summary':
+                return  <List component="nav">
+                    {
+                        this.props.summary.map((item) => 
+                            <ListItem button key={item.question}>
+                                <Avatar>
+                                    {item.id}
+                                </Avatar>
+                                <ListItemText primary={item.question} secondary={item.answer} />
+                            </ListItem>
+                        )
+                    }                    
+                </List>
+            default:
+                break;
+        }
+    }
 
 	render() {
-
-		const { classes } = this.props;
+		const { classes, data, handleChange, answer } = this.props;
 		return (
             <Paper className={'quiz ' + classes.paper} elevation={1}>
                 <form>
-                    <h1 className="title md-title txt-cntr">Question?</h1>
+                    <h1 className="title md-title txt-cntr">{data.type}</h1>
                     <blockquote className="blockquote">
-                        <p>Question description</p>
+                        <p className="header">{data.question}</p>
+                        <p className="sub-header">{data.description}</p>
                     </blockquote>
-                    <div className="def-cntrl-margin">                        
-                        <input type="text" placeholder="insert the answer" />                        
-                    </div>
-                    <div className="def-cntrl-margin">
-                        <select className="select">
-                            <option selected></option>
-                            <option value="grapefruit">Grapefruit</option>
-                            <option value="lime">Lime</option>
-                            <option value="coconut">Coconut</option>
-                            <option value="mango">Mango</option>
-                        </select>                        
-                    </div>
-                    <div className="def-cntrl-margin">
-                        <div>
-                            <label className="input-container">                                
-                                Option 1
-                                <input name="opt" type="radio" value="option1" checked />
-                                <span class="checkmark"></span>
-                            </label>
-                        </div>
-                        <div>
-                            <label className="input-container">                                
-                                Option 2
-                                <input name="opt" type="radio" value="option2" checked />
-                                <span class="checkmark"></span>
-                            </label>
-                        </div>
-                        <div>
-                            <label className="input-container">                                
-                                Option 3
-                                <input name="opt" type="radio" value="option3" checked />
-                                <span class="checkmark"></span>         
-                            </label>
-                        </div>
-                    </div>
+                    { this.getType(data.type, data, handleChange, answer) }
                 </form>
             </Paper>		
 		);
 	}
 }
 
-Wizard.propTypes = {
-	classes: PropTypes.object.isRequired,
+Quiz.propTypes = {
+    classes: PropTypes.object.isRequired,
+    data: PropTypes.object.isRequired,    
+    handleChange: PropTypes.func.isRequired,
+    answer: PropTypes.string.isRequired,
+    summary: PropTypes.array,
 };
   
-export default withStyles(styles)(Wizard);
+export default withStyles(styles)(Quiz);
 

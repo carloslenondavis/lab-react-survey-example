@@ -1,6 +1,6 @@
 input[type='text'] {    
     border: none;
-    border-bottom: 1px solid $base-color-two-rgb-op5;
+    border-bottom: 1px solid $base-color-two-rgb-op1;
     color: $base-font-color;
     width: 100%;
 
@@ -10,7 +10,8 @@ input[type='text'] {
 input {
     &:focus {
         outline-offset: 0 !important;
-        outline: none !important;        
+        outline: none !important;
+        border-bottom: 1px solid $base-color-two-rgb-op5;
     }
 }
 
@@ -54,20 +55,6 @@ input {
         background-color: #eee;
         border-radius: 50%;
 
-        @extend %input-radio-transition;
-
-        &:after {
-            content: "";
-            position: absolute;
-            display: none;
-            top: 5px;
-            left: 5px;
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #eee;
-
-            @extend %default-transition;
-        }
+        @extend %input-radio-transition;       
     }
 }

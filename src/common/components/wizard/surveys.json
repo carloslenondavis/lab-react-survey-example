@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "type": "Question",
+        "question": "How old are you?",
+        "description": "Please review question before answer"
+    },
+    {
+        "id": 2,
+        "type": "Selection",
+        "question": "Which is your favorite Fruits?",
+        "description": "Please review selections before",
+        "options": [
+            "Grapefruit",
+            "Lime",
+            "Coconut",
+            "Mango"
+        ]
+    },
+    {
+        "id": 3,
+        "type": "One Selection",
+        "question": "Which sport you prefer?",
+        "description": "Please review selections before",
+        "options": [
+            "Soccer",
+            "Basketball",
+            "Baseball",
+            "Boxing"
+        ]
+    },
+    {
+        "id": 4,
+        "type": "Summary",        
+        "question": "This is all the summary of your quiz"        
+    }
+]

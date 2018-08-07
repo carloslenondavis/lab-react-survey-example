@@ -9,21 +9,7 @@
 //core dependencies
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Grid, Paper, withStyles } from '@material-ui/core';
 import './_counter.scss';
-
-const styles = theme => ({
-    grid: {
-        padding: 10,
-        width: 'auto',
-        margin: 0
-    },
-    paper: {           
-        flexWrap: 'wrap',
-        padding: theme.spacing.unit / 2,
-        marginTop: '3%'
-    },
-});
 
 class Counter extends Component {
 
@@ -34,16 +20,16 @@ class Counter extends Component {
 	}
 
 	render() {
-		const { classes } = this.props;
+		const { number } = this.props;
 		return (
-            <h1 className="counter x-xl-size">1</h1>			
+            <h1 className="counter x-xl-size">{number}</h1>			
 		);
 	}
 }
 
 Counter.propTypes = {
-	classes: PropTypes.object.isRequired,
+    number: PropTypes.number.isRequired
 };
   
-export default withStyles(styles)(Counter);
+export default Counter;
 
