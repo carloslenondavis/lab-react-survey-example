@@ -22,7 +22,7 @@ These are the instructions to setup and run the proyect on your local. You can a
 Clone the repository
 
 ```
-https://github.com/clenondavis/weTempo.git
+https://github.com/clenondavis/lab-react-survey-example
 ```
 Once you downloaded the repo, install the npm dependencies executing the following command
 
@@ -35,16 +35,14 @@ npm i
 To run the app just execute the following command. By default the servers on ports 3000 and 7000.
 
 ```
-npm run dev
+npm start
 ```
 
-In your browser and url with open 
+In your browser and url with open with default port. You can config this if you want
 
 ```
 localhost:3000
 ```
-
-y veras el cliente de graphql.
 
 ## Test
 
@@ -55,8 +53,6 @@ In Progess .... You can add them an request for a PR (Pull Request) for changes
 
 * [Reactjs](https://reactjs.org/docs/getting-started.html)
 * [Create-react-app](https://github.com/facebook/create-react-app)
-* [Express](http://expressjs.com/es/starter/installing.html) - node lib
-* [babel](https://babeljs.io/) - Transpiler ES5/Es6
 
 
 ## Contributtors
@@ -80,9 +76,7 @@ You can be a colaborator for other community like Nicaragua community [JsNi](htt
 
 ## Authors
 
-* **Carlos Lenon** - *Be fun* - [clenondavis](https://github.com/clenondavis)
-
-See the list of this project [Contributors](https://github.com/clenondavis/weTempo/graphs/contributors).
+* **Carlos Lenon** - *Be fun* - [clenondavis](https://github.com/clenondavis).
 
 ## License
 
