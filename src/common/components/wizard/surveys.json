@@ -32,6 +32,6 @@
     {
         "id": 4,
         "type": "Summary",        
-        "question": "This is all the summary of your quiz"        
+        "question": "This is all the summary of your quiz, with they respective number"        
     }
 ]

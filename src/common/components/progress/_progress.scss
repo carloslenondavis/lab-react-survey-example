@@ -1,0 +1,24 @@
+@import './../../styles/_variables.scss';
+@import './../../styles/_mixins.scss';
+
+.progress-bar {
+    height: 5px;
+    
+    @extend %default-transition;
+
+    .bar {
+        height: 100%;
+        background: $base-color-two-rgb-op1;
+        width: 100%;
+
+        @extend %default-transition;
+
+        .progress {
+            background: $base-color-two-rgb-op5;
+            height: 100%;            
+            width: 0%;
+            @extend %default-transition;
+
+        }
+    }
+}

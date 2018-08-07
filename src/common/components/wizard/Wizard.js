@@ -15,6 +15,7 @@ import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 import RestoreIcon from '@material-ui/icons/Restore';
 import Quiz from './../quiz/Quiz';
 import Counter from './../counter/Counter';
+import ProgressBar from './../progress/ProgressBar';
 import surveysData from './surveys.json';
 
 const styles = theme => ({
@@ -51,15 +52,19 @@ class Wizard extends Component {
     nextSurvey = () => {
         this.setState((prevState) => {
             const counter = prevState.step + 1;
+
+            if(prevState.answer !== '') {
+            }
+
             return {
                 step: counter,
                 survey: surveysData[counter],
                 answer: '',
-                summary: [...this.state.summary, {
+                summary: prevState.answer !== '' ? [...this.state.summary, {
                     id: prevState.survey.id,
                     question: prevState.survey.question,
-                    answer: prevState.answer
-                }]
+                    answer: prevState.answer 
+                }] : this.state.summary
             }
         })
     }
@@ -70,11 +75,11 @@ class Wizard extends Component {
                 surveyFromSurveys = surveysData[counter];
             let surveisReduced = prevState.summary.filter(item => item.id !== surveyFromSurveys.id);
             let survey = prevState.summary.filter(item => item.id === surveyFromSurveys.id)[0];
-
+                        
             return {
                 step: counter,
                 survey: surveysData[counter],
-                answer: survey.answer,                
+                answer: survey !== undefined ? survey.answer : '',
                 summary: surveisReduced
             }
         })
@@ -95,11 +100,12 @@ class Wizard extends Component {
 		return (
             <Grid container justify="center" spacing={0} className={'default-transition ' + classes.grid}>
                 <Grid item xs={10} sm={8} md={6} lg={6} className="default-transition">
-                    <Grid container justify="center" spacing={0} className="default-transition">
+                    <Grid container justify="center" spacing={0} className="default-transition">                        
                         <Grid item xs={12} sm={12} md={3} lg={2} className="align-vrt-midl default-transition">
                             <Counter number={survey.id} />
                         </Grid>
-                        <Grid item xs={12} sm={12} md={9} lg={10} className="default-transition">
+                        <Grid item xs={12} sm={12} md={9} lg={10} className="default-transition">                            
+                            <ProgressBar total={surveysData.length - 1} data={summary} />
                             <Quiz summary={summary} data={survey} answer={answer} handleChange={this.handleChange} />
                         </Grid>
                         <Grid item xs={12} sm={12} md={12} lg={12} className="default-transition txt-right m-t-10">
