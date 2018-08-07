@@ -1,90 +1,37 @@
-![](https://cdn-images-1.medium.com/max/1600/1*-NOQtyJAGQ1RNC3iVt_thA.png)
+Welcome to Glitch
+=================
 
-# SPA with Reacjt, Redux, Node
+Click `Show` in the header to see your app live. Updates to your code will instantly deploy and update live.
 
-SPA for a survey.
-* Initially everything is working with caché
+**Glitch** is the friendly community where you'll build the app of your dreams. Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
 
-## Setup
-
-These are the instructions to setup and run the proyect on your local. You can add your own configurations and stuff for your own purpose.
-
-### Prev-Steps
-
-```
-* Install your favorite editor, in this time i'm used [VSCode ^1.20.1](https://code.visualstudio.com/)
-* Install [Nodejs](https://nodejs.org/es/)
-* Install [GIT](https://git-scm.com/)
-```
-
-### Installation
-
-Clone the repository
-
-```
-https://github.com/clenondavis/lab-react-survey-example
-```
-Once you downloaded the repo, install the npm dependencies executing the following command
-
-```
-npm i
-```
-
-### Run the SPA
-
-To run the app just execute the following command. By default the servers on ports 3000 and 7000.
-
-```
-npm start
-```
-
-In your browser and url with open with default port. You can config this if you want
-
-```
-localhost:3000
-```
-
-## Test
-
-In Progess .... You can add them an request for a PR (Pull Request) for changes
+Find out more [about Glitch](https://glitch.com/about).
 
 
-## Developed with
+Your Project
+------------
 
-* [Reactjs](https://reactjs.org/docs/getting-started.html)
-* [Create-react-app](https://github.com/facebook/create-react-app)
+### ← README.md
 
+That's this file, where you can tell people what your cool website does and how you built it.
 
-## Contributtors
+### ← index.html
 
-* This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
-* This readme template is forked from [Billie Thompson](https://gist.github.com/PurpleBooth)
-* Contributor on create-react-app project [facebook](https://github.com/facebook)
+Where you'll write the content of your website. 
 
+### ← style.css
 
-## Colaborator
+CSS files add styling rules to your content.
 
-Your contribution are important. If you want to become and colaborator just follow next steps:
-* Star the project
-* Follow the project to receive notifications
-* Fork and add PR to push changes
-* get in contact with [clenondavis](https://github.com/clenondavis)
+### ← script.js
 
-You can be a colaborator for other community like Nicaragua community [JsNi](https://github.com/js-ni)
-* get in touch with [Paulo McNally](https://github.com/paulomcnally) ó [Hosmel Quintana](https://github.com/hosmelq), so they can add you as member
+If you're feeling fancy you can add interactivity to your site with JavaScript.
 
+### ← assets
 
-## Authors
+Drag in `assets`, like images or music, to add them to your project
 
-* **Carlos Lenon** - *Be fun* - [clenondavis](https://github.com/clenondavis).
+Made by [Fog Creek](https://fogcreek.com/)
+-------------------
 
-## License
-
-This poroject is based on MIT license - ver see license detail [MIT](https://github.com/clenondavis/weTempo/blob/master/LICENSE)
-
-## Inspiration
-
-* Share code to community
-* On road to be a Full Stack Javscript Developer
-* Learns More
-* Learn from you
+\ ゜o゜)ノ
