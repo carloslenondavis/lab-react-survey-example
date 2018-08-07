@@ -10,6 +10,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './_progress.scss';
+import { Fade } from '@material-ui/core';
 
 class ProgressBar extends Component {
 
@@ -24,11 +25,13 @@ class ProgressBar extends Component {
 			stepWidth = 100 / total,
 			prWidth = stepWidth * data.length;
 		return (
-            <div className="progress-bar">				
-				<div className="bar">
-					<div className="progress" style={{width: + prWidth + '%'}}></div>
+			<Fade in={true} style={{ transitionDelay: true ? 300 : 50 }}>
+				<div className="progress-bar">				
+					<div className="bar">
+						<div className="progress" style={{width: + prWidth + '%'}}></div>
+					</div>
 				</div>
-			</div>
+			</Fade>            
 		);
 	}
 }

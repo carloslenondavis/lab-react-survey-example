@@ -9,7 +9,7 @@
 //core dependencies
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { AppBar, Toolbar, Typography, withStyles, Avatar } from '@material-ui/core';
+import { AppBar, Toolbar, Typography, withStyles, Avatar, Fade } from '@material-ui/core';
 
 const styles = {	
 	flex: {
@@ -33,14 +33,16 @@ class Header extends Component {
 		const { classes, appName } = this.props;
 		return (
 			<div>
-				<AppBar position="static" className={classes.appBar}>
-					<Toolbar>						
-						<Typography variant="title" color="inherit" className={classes.flex}>
-							{appName}
-						</Typography>
-						<Avatar alt="Carlos Lenon" src="https://avatars0.githubusercontent.com/u/4239218?s=460&v=4" className={classes.avatar} />
-					</Toolbar>
-				</AppBar>
+				<Fade in={true} style={{ transitionDelay: true ? 300 : 50 }}>
+					<AppBar position="static" className={classes.appBar}>
+						<Toolbar>						
+							<Typography variant="title" color="inherit" className={classes.flex}>
+								{appName}
+							</Typography>
+							<Avatar alt="Carlos Lenon" src="https://avatars0.githubusercontent.com/u/4239218?s=460&v=4" className={classes.avatar} />
+						</Toolbar>
+					</AppBar>
+				</Fade>				
 			</div>
 		);
 	}

@@ -9,7 +9,7 @@
 //core dependencies
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Grid, withStyles, Button } from '@material-ui/core';
+import { Grid, withStyles, Button, Zoom, Grow } from '@material-ui/core';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 import RestoreIcon from '@material-ui/icons/Restore';
@@ -111,39 +111,45 @@ class Wizard extends Component {
                         <Grid item xs={12} sm={12} md={12} lg={12} className="default-transition txt-right m-t-10">
                             {
                                 step > 0 && step < surveysData.length - 1 ? 
-                                <Button 
-                                    variant="fab"
-                                    mini 
-                                    color="primary"
-                                    aria-label="Back" 
-                                    className={classes.button}
-                                    onClick={this.backSurvey}>                                
-                                    <NavigateBeforeIcon />
-                                </Button> : null
+                                <Zoom in={true} style={{ transitionDelay: true ? 300 : 50 }}>
+                                    <Button 
+                                        variant="fab"
+                                        mini 
+                                        color="primary"
+                                        aria-label="Back" 
+                                        className={classes.button}
+                                        onClick={this.backSurvey}>                                
+                                        <NavigateBeforeIcon />
+                                    </Button>
+                                </Zoom>: null
                             }
                             {
                                 step === surveysData.length - 1 ? 
-                                <Button 
-                                    variant="fab"
-                                    mini 
-                                    color="secondary"
-                                    aria-label="Back" 
-                                    className={classes.button}
-                                    onClick={this.cleanSurvey}>                                
-                                    <RestoreIcon />
-                                </Button> : null
+                                <Zoom in={true} style={{ transitionDelay: true ? 300 : 50 }}>
+                                    <Button 
+                                        variant="fab"
+                                        mini 
+                                        color="secondary"
+                                        aria-label="Back" 
+                                        className={classes.button}
+                                        onClick={this.cleanSurvey}>                                
+                                        <RestoreIcon />
+                                    </Button>
+                                </Zoom>: null
                             }
                             {
                                 step !== surveysData.length - 1 ? 
-                                    <Button 
-                                        variant="fab" 
-                                        mini 
-                                        color="secondary" 
-                                        aria-label="Next" 
-                                        className={classes.button}
-                                        onClick={this.nextSurvey}>
-                                        <NavigateNextIcon />
-                                    </Button> : null
+                                    <Grow in={true} style={{ transitionDelay: true ? 300 : 50 }}>
+                                        <Button 
+                                            variant="fab" 
+                                            mini 
+                                            color="secondary" 
+                                            aria-label="Next" 
+                                            className={classes.button}
+                                            onClick={this.nextSurvey}>
+                                            <NavigateNextIcon />
+                                        </Button>
+                                    </Grow>: null
                             }
                         </Grid>
                     </Grid>

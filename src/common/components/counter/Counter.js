@@ -9,6 +9,7 @@
 //core dependencies
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Zoom } from '@material-ui/core';
 import './_counter.scss';
 
 class Counter extends Component {
@@ -22,7 +23,9 @@ class Counter extends Component {
 	render() {
 		const { number } = this.props;
 		return (
-            <h1 className="counter x-xl-size">{number}</h1>			
+			<Zoom in={true} style={{ transitionDelay: true ? 300 : 50 }}>
+				<h1 className="counter x-xl-size">{number}</h1>
+			</Zoom>			
 		);
 	}
 }
